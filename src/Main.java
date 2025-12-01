@@ -22,10 +22,32 @@ public class Main {
             {
                 case 1 :
                     // Ne pas effacer cette ligne
+
                     int[] tabExo1 = new int[5];
+                    int somme=0;
+                    boolean pasUn = false;
+// A vous de jouer
 
-                    // A vous de jouer
 
+                    for(int i = 0; i < tabExo1.length; i++){
+                        tabExo1[i] = rand.nextInt(1,6);
+                        System.out.print(tabExo1[i]+"-");
+                        somme+=tabExo1[i];
+                    }System.out.println();
+                    System.out.println(somme);
+
+                    for(int i = 0; i < tabExo1.length; i++){
+                        if(tabExo1[i] == 1){
+                            pasUn = true;
+                            break;
+                        }
+                    }
+
+                    if (somme >= 18 && !pasUn) {
+                        System.out.println("Gagner ");
+                    }else{
+                        System.out.println("Perdu");
+                    }
 
                     break;
                 case 2 :
@@ -44,8 +66,9 @@ public class Main {
                 case 0 :
                     System.out.println("FIN DU PROGRAMME");
                     break;
-                    //jeufhfbrdfhhferuifyu
-                //efihudsihehidyugfsydehiuygdezsiuyd
+
+
+
             }
         }while(choix!=0);
     }
